@@ -1,4 +1,3 @@
-#include <iostream>
 #include <fstream>
 #include <functional>
 #include "llrec.h"
@@ -20,7 +19,7 @@ Node* readList(const char* filename);
  * Prints the integers in a linked list pointed to
  * by head.
  */
-void print(Node* head);
+// void print(Node* head);
 
 /**
  * Deallocates the linked list nodes
@@ -43,14 +42,14 @@ Node* readList(const char* filename)
     return h;
 }
 
-void print(Node* head)
-{
-    while(head) {
-        cout << head->val << " ";
-        head = head->next;
-    }
-    cout << endl;
-}
+// void print(Node* head)
+// {
+//     while(head) {
+//         cout << head->val << " ";
+//         head = head->next;
+//     }
+//     cout << endl;
+// }
 
 void dealloc(Node* head)
 {
@@ -75,28 +74,28 @@ bool isOdd(int val) {
 
 int main(int argc, char* argv[])
 {
-    if(argc < 2) {
-        cout << "Please provide an input file" << endl;
-        return 1;
-    }
+    // if(argc < 2) {
+    //     cout << "Please provide an input file" << endl;
+    //     return 1;
+    // }
 
-    // -----------------------------------------------
-    // Feel free to update any code below this point
-    // -----------------------------------------------
-    Node* head = readList(argv[1]);
-    cout << "Original list: ";
-    print(head);
-
-    // Test out your linked list code
-    // Node * smaller;
-    // Node * larger;
-    Node * filter;
-    // llpivot(head, smaller, larger, 20);
-    // print(smaller);
-    // print(larger);
+    // // -----------------------------------------------
+    // // Feel free to update any code below this point
+    // // -----------------------------------------------
+    // Node* head = readList(argv[1]);
+    // cout << "Original list: ";
     // print(head);
-    filter = llfilter(head, isOdd);
-    print(filter);
+
+    // // Test out your linked list code
+    // // Node * smaller;
+    // // Node * larger;
+    // Node * filter;
+    // // llpivot(head, smaller, larger, 20);
+    // // print(smaller);
+    // // print(larger);
+    // // print(head);
+    // filter = llfilter(head, isOdd);
+    // print(filter);
 
 
 
